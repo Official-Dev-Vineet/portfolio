@@ -74,3 +74,9 @@ document.querySelector("#color").onchange=()=>{
   document.querySelector("#theme").classList.remove("active")
     
 }
+// set year for copyright
+let year=document.querySelector('#year');
+const currentYear=new Date().getFullYear();
+year.textContent=` ${currentYear}`;
+
+

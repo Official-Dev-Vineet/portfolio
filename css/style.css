@@ -184,7 +184,7 @@ font-family: 'Ubuntu', sans-serif; */
 /* home section  */
 .home {
     display: flex;
-    background: url(../images/banner.jpg) no-repeat center;
+    background: url(https://portfolio-vineet.netlify.app/images/banner.jpg) no-repeat center;
     height: 100vh;
     min-height: 500px;
     color: #fff;
@@ -310,7 +310,10 @@ section {
 .about .about-content .left img {
     height: 400px;
     width: 400px;
-    object-fit: cover;
+    object-fit: contain;
+    border-radius: 20px;
+  
+    
 }
 
 .about .about-content .left {
@@ -517,7 +520,7 @@ section {
 }
 
 .skills .skills-content .right .css::before {
-    width: 60%;
+    width: 90%;
 }
 
 .skills .skills-content .right .js::before {
@@ -529,11 +532,14 @@ section {
 }
 
 .skills .skills-content .right .mysql::before {
-    width: 70%;
+    width: 50%;
 }
 
 .skills .skills-content .right .python::before {
-    width: 50%;
+    width: 70%;
+}
+.skills .skills-content .right .react::before {
+    width: 75%;
 }
 
 /* team section styling */
@@ -680,8 +686,11 @@ section {
     font-weight: 500;
 }
 
-.contact .contact-content .left .row .info .sub-title {
+.contact .contact-content .left .row .info .sub-title a{
     color: #333;
+}
+.contact .contact-content .left .row .info .sub-title a:hover{
+    text-decoration: underline;
 }
 
 .contact .right form .fields {
