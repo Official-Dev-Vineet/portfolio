@@ -5,31 +5,30 @@ $(document).ready(() => {
     } else {
       $(".navbar").removeClass("sticky");
     }
-    if (this.scrollY > 500){
-        $(" .scroll-up-button").addClass("show")
+    if (this.scrollY > 500) {
+      $(" .scroll-up-button").addClass("show")
     }
-    else{
-        $(" .scroll-up-button").removeClass("show")
+    else {
+      $(" .scroll-up-button").removeClass("show")
     }
   });
-//   typing animation 
-var typed= new Typed(".typing",{
-    strings:["Developer","Freelancer","Debugger"],
-    typeSpeed:100,
-    backSpeed:60,
-    loop:true,
-})
-var typed= new Typed(".typing-2",{
-    strings:["Developer","Freelancer","Debugger"],
-    typeSpeed:100,
-    backSpeed:60,
-    loop:true,
-})
-//   scrollUp effect
-$(" .scroll-up-button").click(()=>
-{
-    $("html").animate({scrollTop:0})
-})
+  //   typing animation 
+  var typed = new Typed(".typing", {
+    strings: ["Developer", "Freelancer", "Debugger"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true,
+  })
+  var typed = new Typed(".typing-2", {
+    strings: ["Developer", "Freelancer", "Debugger"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true,
+  })
+  //   scrollUp effect
+  $(" .scroll-up-button").click(() => {
+    $("html").animate({ scrollTop: 0 })
+  })
   // toggle menu/navbar
   $(".menu-btn").click(() => {
     $(".menu").toggleClass("active");
@@ -42,41 +41,49 @@ $(".carousel").owlCarousel({
   loop: true,
   autoplayTimeOut: 2000,
   autoplayHoverPause: true,
-  responsive:{
-    0:{
+  responsive: {
+    0: {
       items: 1,
       nav: false
     },
-    600:{
+    600: {
       items: 2,
       nav: false
     },
-    1000:{
+    1000: {
       items: 3,
       nav: false
     }
   }
 });
 //theme setup
-let color=document.querySelectorAll("#theme ul li span").forEach((e)=>{
-  e.style.backgroundColor=`${e.getAttribute("data-color")}`
-  e.onclick=()=>{
-    document.querySelector(":root").style.setProperty("--mainColor",e.getAttribute("data-color"));
+let color = document.querySelectorAll("#theme ul li span").forEach((e) => {
+  e.style.backgroundColor = `${e.getAttribute("data-color")}`
+  e.onclick = () => {
+    document.querySelector(":root").style.setProperty("--mainColor", e.getAttribute("data-color"));
     document.querySelector("#theme").classList.remove("active")
   }
 })
-document.querySelector(".theme").onclick=()=>{
+document.querySelector(".theme").onclick = () => {
   document.querySelector("#theme").classList.toggle("active")
 }
-document.querySelector("#color").onchange=()=>{
-  let color=document.querySelector("#color").value;
-  document.querySelector(":root").style.setProperty("--mainColor",color);
+document.querySelector("#color").onchange = () => {
+  let color = document.querySelector("#color").value;
+  document.querySelector(":root").style.setProperty("--mainColor", color);
   document.querySelector("#theme").classList.remove("active")
-    
+
 }
 // set year for copyright
-let year=document.querySelector('#year');
-const currentYear=new Date().getFullYear();
-year.textContent=` ${currentYear}`;
+let year = document.querySelector('#year');
+const currentYear = new Date().getFullYear();
+year.textContent = ` ${currentYear}`;
 
-
+// form data send to email id 
+document.querySelector('#contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.querySelector('#name').value
+  const email = document.querySelector('#email').value
+  const subject = document.querySelector('#subject').value
+  const msg = document.querySelector('#msg').value
+  window.open(`mailto:viratsinghkaharwar8923@gmail.com?subject=${subject}&body=${msg}+send by ${name} and my email address is : ${email}`);
+})

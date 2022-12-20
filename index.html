@@ -66,7 +66,7 @@
       </ul>
       <div class="your-theme">
         <h4>Custom color</h4>
-        <input type="color" id="color"  value="#234678"/>
+        <input type="color" id="color" value="#234678" />
       </div>
     </div>
     <!-- home section start  -->
@@ -225,10 +225,7 @@
         <div class="carousel owl-carousel">
           <div class="card">
             <div class="box">
-              <img
-                src="/images/COLOR_POP.jpg"
-                alt="profile pic"
-              />
+              <img src="/images/COLOR_POP.jpg" alt="profile pic" />
               <div class="text">Vineet Singh</div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
@@ -304,25 +301,30 @@
 
           <div class="column right">
             <div class="text">Message me</div>
-            <form action="#">
+            <form action="index.html" id="contactForm">
               <div class="fields">
                 <div class="field name">
-                  <input type="text" placeholder="Name" />
+                  <input type="text" id="name" placeholder="Name" required />
                 </div>
                 <div class="field email">
-                  <input type="email" placeholder="Email" />
+                  <input type="email" id="email" placeholder="Email" required />
                 </div>
               </div>
               <div class="field">
-                <input type="text" placeholder="Subject" />
+                <input
+                  type="text"
+                  id="subject"
+                  placeholder="Subject"
+                  required
+                />
               </div>
               <div class="field textarea">
                 <textarea
-                  name=""
-                  id=""
+                  id="msg"
                   cols="30"
                   rows="10"
                   placeholder="Describe Project..."
+                  required
                 ></textarea>
               </div>
               <div class="button">
