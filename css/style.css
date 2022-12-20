@@ -103,6 +103,11 @@ font-family: 'Ubuntu', sans-serif; */
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
+#theme .your-theme input{
+    width: 100%;
+    border: none;
+    outline: none
+}
 /* navbar styling  */
 .navbar {
     position: fixed;
